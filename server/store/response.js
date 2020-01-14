@@ -6,7 +6,7 @@
 const initialState = [] // {user: "", response: "" , likes: 0, promptId: 0}
 
 // REDUCER
-const reducer = (state = initialState, action) => {
+const response = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state
@@ -14,4 +14,4 @@ const reducer = (state = initialState, action) => {
 }
 
 // EXPORT
-module.exports = {reducer}
+module.exports = {response}
