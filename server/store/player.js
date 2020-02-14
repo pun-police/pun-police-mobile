@@ -3,12 +3,12 @@ const ADD_PLAYER = 'ADD_PLAYER'
 const UPDATE_PLAYER = 'UPDATE_PLAYER'
 
 // ACTION CREATORS
-export const addPlayer = player => ({
+const addPlayer = player => ({
   type: ADD_PLAYER,
   player
 })
 
-export const updatePlayer = (id, score) => ({
+const updatePlayer = (id, score) => ({
   type: UPDATE_PLAYER,
   id,
   score
@@ -34,4 +34,4 @@ const player = (state = initialState, action) => {
 }
 
 // EXPORT
-module.exports = {player}
+module.exports = {player, addPlayer, updatePlayer}

@@ -4,8 +4,8 @@ const ADD_RESPONSE = 'ADD_RESPONSE'
 const LIKE = 'LIKE'
 
 // ACTION CREATORS
-export const addResponse = response => ({type: ADD_RESPONSE, response})
-export const like = (userId, round) => ({type: LIKE, userId, round})
+const addResponse = response => ({type: ADD_RESPONSE, response})
+const like = (userId, round) => ({type: LIKE, userId, round})
 
 // INITIAL STATE
 const initialState = [] // {userId: UUID, response: "" , likes: 0, round: 0, promptId: 0}
@@ -34,4 +34,4 @@ const response = (state = initialState, action) => {
 }
 
 // EXPORT
-module.exports = {response}
+module.exports = {response, addResponse, like}

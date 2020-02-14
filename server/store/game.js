@@ -2,7 +2,7 @@
 const CHANGE_PHASE = 'CHANGE_PHASE'
 
 // ACTION CREATORS
-export const changePhase = (phase, round = 0, prompt) => ({
+const changePhase = (phase, round = 0, prompt) => ({
   type: CHANGE_PHASE,
   phase,
   round,
