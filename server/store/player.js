@@ -3,12 +3,12 @@ const ADD_PLAYER = 'ADD_PLAYER'
 const UPDATE_PLAYER = 'UPDATE_PLAYER'
 
 // ACTION CREATORS
-const addPlayer = player => ({
+export const addPlayer = player => ({
   type: ADD_PLAYER,
   player
 })
 
-const updatePlayer = (id, score) => ({
+export const updatePlayer = (id, score) => ({
   type: UPDATE_PLAYER,
   id,
   score
