@@ -1,11 +1,18 @@
 const {createStore, combineReducers} = require('redux')
 
-const {game} = require('./game')
-const {player} = require('./player')
-const {response} = require('./response')
+const {game, changePhase} = require('./game')
+const {player, addPlayer, updatePlayer} = require('./player')
+const {response, addResponse, like} = require('./response')
 
 const reducer = combineReducers(game, player, response)
 
 const store = createStore(reducer)
 
-module.exports = {store}
+module.exports = {
+  store,
+  changePhase,
+  addPlayer,
+  updatePlayer,
+  addResponse,
+  like
+}
