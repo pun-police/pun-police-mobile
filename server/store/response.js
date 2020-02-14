@@ -5,7 +5,7 @@ const LIKE = 'LIKE'
 
 // ACTION CREATORS
 const addResponse = response => ({type: ADD_RESPONSE, response})
-const like = (userId, round) => ({type: LIKE, userId, likedUserId, round})
+const like = (userId, round) => ({type: LIKE, userId, round})
 
 // INITIAL STATE
 const initialState = [] // {userId: UUID, response: "" , likes: 0, round: 0, promptId: 0}
