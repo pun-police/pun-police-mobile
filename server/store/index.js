@@ -6,10 +6,10 @@ const {response, addResponse, like} = require('./response')
 
 const reducer = combineReducers(game, player, response)
 
-const store = createStore(reducer)
+const makeStore = () => createStore(reducer)
 
 module.exports = {
-  store,
+  makeStore,
   changePhase,
   addPlayer,
   updatePlayer,
