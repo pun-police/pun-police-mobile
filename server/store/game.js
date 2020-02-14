@@ -1,15 +1,13 @@
 // ACTION TYPES
 const CHANGE_PHASE = 'CHANGE_PHASE'
-const CHANGE_PROMPT = 'CHANGE_PROMPT'
 
 // ACTION CREATORS
-export const changePhase = (phase, round = 0) => ({
+export const changePhase = (phase, round = 0, prompt) => ({
   type: CHANGE_PHASE,
   phase,
-  round
+  round,
+  prompt
 })
-
-export const changePrompt = prompt => ({type: CHANGE_PROMPT, prompt})
 
 // INITIAL STATE
 const initialState = {
@@ -22,9 +20,7 @@ const initialState = {
 const game = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_PHASE:
-      return {phase: action.phase, round: action.round}
-    case CHANGE_PROMPT:
-      return {...state, prompt: action.prompt}
+      return {phase: action.phase, prompt: action.prompt, round: action.round}
     default:
       return state
   }
