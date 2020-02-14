@@ -1,4 +1,25 @@
 const uuid = require('uuid/v4')
+const {addPlayer, updatePlayer, addResponse, like} = require('../store')
+
+// io emit
+// TO HOST:
+// join
+// quit
+// response -> {response[]}
+// vote -> {response[]}
+// results -> {response[]}
+// TO ALL/SPECIFIC CLIENT:
+// round change
+// intro
+// prompt -> {prompt}
+// respond
+// vote -> {response[]}
+// results
+// response confirmation
+// vote confirmation
+// like confirmation
+// score updates and likes
+
 module.exports = io => {
   io.on('connection', socket => {
     console.log(`A socket connection to the server has been made: ${socket.id}`)
@@ -22,6 +43,7 @@ module.exports = io => {
 
     socket.on('join', gameId => {
       // player joins room
+      io.emit('join').to(host)
     })
 
     socket.on('response', response => {
